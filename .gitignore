@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+web/dist/
+web/.vite/
+*.local
+.npm-cache/
+.pnpm-store/
+
+# Build / runtime
+.DS_Store
+Thumbs.db
+
+# Scraper runtime artifacts (kept out of git)
+.cache/
+scrapers/.cookies/
+data/raw/
+data/review.json
+
+# Logs
+*.log

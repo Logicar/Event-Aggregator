@@ -1,0 +1,41 @@
+<view wx:if="{{event}}">
+  <view class="section">
+    <view class="card-title">{{event.title}}</view>
+    <view>
+      <text class="badge badge-domain" wx:for="{{event.domains}}" wx:for-item="d" wx:key="*this">{{d}}</text>
+      <text class="badge badge-type">{{event.typeLabel}}</text>
+      <text class="badge badge-ongoing" wx:if="{{event.status === 'ongoing'}}">进行中</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <h3>时间与地点</h3>
+    <view class="meta">
+      <view><b>时间</b>：{{event.start_date}} — {{event.end_date}}</view>
+      <view><b>地点</b>：{{event.province}} {{event.city}} · {{event.venue}}</view>
+      <view wx:if="{{event.organizer}}"><b>主办</b>：{{event.organizer}}</view>
+    </view>
+  </view>
+
+  <view class="section" wx:if="{{event.status !== 'ended'}}">
+    <h3>报名信息</h3>
+    <view class="meta" wx:if="{{event.registration_deadline}}">
+      <b>报名截止</b>：{{event.registration_deadline}}
+    </view>
+    <view wx:for="{{event.registration_requirements}}" wx:key="*this" class="meta">· {{item}}</view>
+    <view style="margin-top: 16rpx;">
+      <text class="btn" data-url="{{event.registration_url}}" bindtap="openUrl" wx:if="{{event.registration_url}}">报名入口</text>
+      <text class="btn btn-ghost" data-url="{{event.url}}" bindtap="openUrl">查看详情</text>
+    </view>
+  </view>
+
+  <view class="section" wx:if="{{event.status === 'ended' && event.materialsLabel.length}}">
+    <h3>资料回放</h3>
+    <text class="material" wx:for="{{event.materialsLabel}}" wx:for-item="m" wx:key="url" data-url="{{m.url}}" bindtap="openUrl">{{m.label}}：{{m.title}}</text>
+  </view>
+
+  <view class="section" wx:if="{{event.summary}}">
+    <h3>简介</h3>
+    <view class="meta">{{event.summary}}</view>
+  </view>
+</view>

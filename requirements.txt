@@ -1,0 +1,7 @@
+# 完整抓取依赖（GitHub Actions 中安装）。
+# 本地演示模式 `python -m pipeline.run --demo` 仅用标准库，无需安装。
+requests>=2.31
+lxml>=5.0
+beautifulsoup4>=4.12
+PyYAML>=6.0
+jsonschema>=4.20

@@ -1,0 +1,51 @@
+page {
+  background: #f5f6f8;
+  color: #1f2329;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin: 20rpx;
+}
+.card-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 12rpx;
+}
+.badge {
+  display: inline-block;
+  font-size: 22rpx;
+  padding: 4rpx 14rpx;
+  border-radius: 8rpx;
+  margin-right: 10rpx;
+  margin-bottom: 8rpx;
+}
+.badge-domain { background: #eaf0ff; color: #2f6bff; }
+.badge-type { background: #f1f5f9; color: #475569; }
+.badge-ongoing { background: #e7f6ec; color: #16a34a; }
+.meta { color: #6b7280; font-size: 26rpx; }
+.meta b { color: #1f2329; font-weight: 600; }
+.seg { display: flex; margin: 20rpx; }
+.seg-item {
+  flex: 1; text-align: center; padding: 16rpx; background: #fff;
+  border: 1rpx solid #e5e7eb; color: #6b7280; font-size: 28rpx;
+}
+.seg-item:first-child { border-radius: 12rpx 0 0 12rpx; }
+.seg-item:last-child { border-radius: 0 12rpx 12rpx 0; }
+.seg-item.active { background: #2f6bff; border-color: #2f6bff; color: #fff; }
+.btn {
+  display: inline-block; padding: 12rpx 32rpx; border-radius: 12rpx;
+  background: #2f6bff; color: #fff; font-size: 28rpx;
+}
+.btn-ghost { background: #f1f5f9; color: #1f2329; }
+.material {
+  display: inline-block; font-size: 24rpx; color: #2f6bff;
+  border: 1rpx solid #e5e7eb; border-radius: 8rpx; padding: 6rpx 16rpx; margin: 0 12rpx 8rpx 0;
+}
+.section { margin: 20rpx; background: #fff; border-radius: 16rpx; padding: 24rpx; }
+.section h3 { font-size: 28rpx; margin: 0 0 12rpx; color: #374151; }
+.empty { text-align: center; color: #6b7280; padding: 80rpx 0; }

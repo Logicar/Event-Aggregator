@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-06T23:31:04+08:00",
+  "count": 3,
+  "events": [
+    {
+      "id": "evt_20261206_11500049524f89db",
+      "title": "2026 年中国生物化学与分子生物学学术大会",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "北京",
+      "city": "北京",
+      "venue": "国家会议中心",
+      "start_date": "2026-12-06",
+      "end_date": "2026-12-09",
+      "url": "https://example.com/event/csbmb2026",
+      "source_url": "https://www.csbmb.org.cn/meetings",
+      "source_name": "中国生物化学与分子生物学会",
+      "source_type": "website",
+      "status": "upcoming",
+      "fields": [
+        "生物化学",
+        "分子生物学"
+      ],
+      "keywords": [
+        "生物化学",
+        "学术大会"
+      ],
+      "tags": [
+        "全国",
+        "学会"
+      ],
+      "organizer": "中国生物化学与分子生物学会",
+      "institution": "中国生物化学与分子生物学会",
+      "organizer_type": "society",
+      "registration_url": "https://example.com/reg/csbmb2026",
+      "registration_deadline": "2026-11-21",
+      "registration_requirements": [
+        "面向全国高校、科研院所师生及企业研发人员",
+        "学生代表注册费 800 元，正式代表 1500 元",
+        "名额 2000 人，先到先得"
+      ],
+      "abstract_deadline": "2026-11-11",
+      "summary": "聚焦生物化学与分子生物学前沿，设主会场与多个分会场。",
+      "materials": [],
+      "first_seen": "2026-11-06",
+      "last_updated": "2026-11-06"
+    },
+    {
+      "id": "evt_20261118_3cd4a5fd4f6fe04e",
+      "title": "AI for Drug Discovery 前沿论坛",
+      "type": "forum",
+      "domains": [
+        "AI4Science",
+        "医学药学"
+      ],
+      "province": "线上",
+      "city": "线上",
+      "venue": "线上（腾讯会议）",
+      "start_date": "2026-11-18",
+      "end_date": "2026-11-18",
+      "url": "https://example.com/event/ai-drug-forum",
+      "source_url": "https://mp.weixin.qq.com/s/demo",
+      "source_name": "某高校人工智能研究院",
+      "source_type": "wechat_mp",
+      "status": "upcoming",
+      "fields": [
+        "AI+药物",
+        "药物研发"
+      ],
+      "keywords": [
+        "AI制药",
+        "论坛"
+      ],
+      "tags": [
+        "线上",
+        "交叉学科"
+      ],
+      "organizer": "某高校交叉研究院",
+      "institution": "某高校",
+      "organizer_type": "university",
+      "registration_url": "https://example.com/reg/ai-drug-forum",
+      "registration_deadline": "2026-11-14",
+      "registration_requirements": [
+        "免费参加",
+        "需提前注册获取会议链接"
+      ],
+      "summary": "邀请业界与学界嘉宾，探讨 AI 在药物发现中的应用。",
+      "materials": [],
+      "first_seen": "2026-11-06",
+      "last_updated": "2026-11-06"
+    },
+    {
+      "id": "evt_20261105_52d2f2e72a0c68e7",
+      "title": "国际医学药学青年学者研讨会",
+      "type": "seminar",
+      "domains": [
+        "医学药学"
+      ],
+      "province": "上海",
+      "city": "上海",
+      "venue": "上海国际会议中心",
+      "start_date": "2026-11-05",
+      "end_date": "2026-11-08",
+      "url": "https://example.com/event/med-youth",
+      "source_url": "https://www.cpa.org.cn/meetings",
+      "source_name": "中国药学会",
+      "source_type": "website",
+      "status": "ongoing",
+      "fields": [
+        "药学",
+        "临床医学"
+      ],
+      "keywords": [
+        "青年学者",
+        "研讨会"
+      ],
+      "tags": [
+        "国际",
+        "青年"
+      ],
+      "organizer": "中国药学会",
+      "institution": "中国药学会",
+      "organizer_type": "society",
+      "registration_url": "https://example.com/reg/med-youth",
+      "registration_deadline": "2026-11-03",
+      "registration_requirements": [
+        "面向 40 岁以下青年科研人员"
+      ],
+      "summary": "正在进行的青年学者研讨会，聚焦医学药学交叉前沿。",
+      "materials": [],
+      "first_seen": "2026-11-06",
+      "last_updated": "2026-11-06"
+    }
+  ]
+}

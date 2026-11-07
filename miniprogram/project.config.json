@@ -1,0 +1,20 @@
+{
+  "description": "会议论坛信息聚合平台微信小程序",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.0.0",
+  "appid": "wx0000000000000000",
+  "projectname": "event-aggregator-miniprogram",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "miniprogramRoot": "./"
+}

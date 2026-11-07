@@ -1,0 +1,125 @@
+# 数据源注册表
+# 按 source_type 分组登记。静态站点用 selectors 配置通用列表解析；
+# 公众号/小红书/抖音等平台需登录态，默认 enabled: false，走「抓取候选 → 人工确认」。
+# 说明：list_url / selectors 的最终值需在实施阶段逐站核验真实页面结构后填写。
+
+version: 1
+
+defaults:
+  rate_limit_ms: 1500        # 每请求最小间隔（毫秒）
+  timeout_s: 20
+  user_agent: "EventAggregatorBot/1.0 (+https://github.com/example/event-aggregator)"
+  max_retries: 3
+  backoff_s: 5
+
+sources:
+
+  # ── 静态网站 ──────────────────────────────────────────────
+  website:
+    - name: 中国生物化学与分子生物学会
+      base_url: https://www.csbmb.org.cn
+      list_url: ""            # 待核验：会议/通知列表页
+      category: 学会/机构
+      domains: [生命科学]
+      fields: [生物化学, 分子生物学]
+      adapter: generic_list
+      enabled: false
+      selectors:              # 待逐站核验填写
+        item: ""
+        title: ""
+        link: ""
+        date: ""
+        venue: ""
+        pagination: ""
+
+    - name: 中国细胞生物学学会
+      base_url: https://www.cscb.org.cn
+      list_url: ""
+      category: 学会/机构
+      domains: [生命科学]
+      fields: [细胞生物学]
+      adapter: generic_list
+      enabled: false
+      selectors: { item: "", title: "", link: "", date: "" }
+
+    - name: 中国药学会
+      base_url: https://www.cpa.org.cn
+      list_url: ""
+      category: 学会/机构
+      domains: [医学药学]
+      fields: [药学]
+      adapter: generic_list
+      enabled: false
+      selectors: { item: "", title: "", link: "", date: "" }
+
+    - name: 中国人工智能学会
+      base_url: https://www.caai.cn
+      list_url: ""
+      category: 学会/机构
+      domains: [AI4Science]
+      fields: [人工智能, AI4Science]
+      adapter: generic_list
+      enabled: false
+      selectors: { item: "", title: "", link: "", date: "" }
+
+    - name: 北京大学（生命科学/医学/AI 院系通知）
+      base_url: https://www.pku.edu.cn
+      list_url: ""
+      category: 高校
+      domains: [生命科学, 医学药学, AI4Science]
+      adapter: generic_list
+      enabled: false
+      selectors: { item: "", title: "", link: "", date: "" }
+
+    - name: 学术会议在线
+      base_url: ""
+      list_url: ""
+      category: 会议聚合站
+      domains: [生命科学, 医学药学, AI4Science]
+      adapter: generic_list
+      enabled: false
+      selectors: { item: "", title: "", link: "", date: "" }
+
+    - name: 生物谷会议
+      base_url: https://www.bioon.com
+      list_url: ""
+      category: 会议聚合站
+      domains: [生命科学, 医学药学]
+      adapter: generic_list
+      enabled: false
+      selectors: { item: "", title: "", link: "", date: "" }
+
+  # ── 微信公众号（半自动：搜狗微信搜索 + 关键词监控）─────────
+  wechat_mp:
+    - name: 生物谷
+      account: bioon
+      keywords: [会议, 论坛, 讲座, 学术会议]
+      domains: [生命科学, 医学药学]
+      adapter: wechat_search
+      enabled: false            # 需登录态/接口核验后启用
+
+    - name: 丁香学术
+      account: dxy
+      keywords: [会议, 论坛, 讲座]
+      domains: [医学药学]
+      adapter: wechat_search
+      enabled: false
+
+  # ── 小红书（半自动：关键词搜索 + 人工确认）─────────────────
+  xiaohongshu:
+    - name: 生命科学学术活动
+      keywords: [学术会议, 论坛报名, 讲座]
+      domains: [生命科学, 医学药学, AI4Science]
+      adapter: xiaohongshu_search
+      enabled: false            # 需登录 Cookie
+
+  # ── 抖音（半自动：关键词搜索 + 人工确认）───────────────────
+  douyin:
+    - name: 学术活动情报
+      keywords: [学术会议, 论坛, 讲座报名]
+      domains: [生命科学, 医学药学, AI4Science]
+      adapter: douyin_search
+      enabled: false            # 需登录 Cookie / 平台接口
+
+  # ── RSS（如有可用订阅源可优先接入）─────────────────────────
+  rss: []

@@ -1,0 +1,46 @@
+name: Scrape & Update Data
+
+on:
+  schedule:
+    # UTC 01:00 = 北京时间 09:00，每日抓取
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "sources/**"
+      - "scrapers/**"
+      - "pipeline/**"
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        run: python -m pipeline.run --config sources/sources.yaml --out data
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/events.json data/archive.json
+          if git diff --cached --quiet; then
+            echo "数据无变化，跳过提交"
+          else
+            git commit -m "chore: update events feed"
+            git push
+          fi

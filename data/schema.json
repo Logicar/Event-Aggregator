@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.github.io/event-aggregator/data/schema.json",
+  "title": "Event",
+  "description": "会议/论坛/讲座活动的规范化结构，活动 Feed 与归档 Feed 共用。",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "type",
+    "domains",
+    "province",
+    "city",
+    "venue",
+    "start_date",
+    "end_date",
+    "url",
+    "source_url",
+    "source_name",
+    "source_type",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "稳定唯一 ID（来源+标题+日期指纹），用于去重与增量推送。"
+    },
+    "title": { "type": "string", "description": "活动标题。" },
+    "type": {
+      "type": "string",
+      "enum": ["conference", "forum", "lecture", "seminar", "workshop"]
+    },
+    "domains": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "enum": ["生命科学", "医学药学", "AI4Science"] }
+    },
+    "fields": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "细分研究领域。"
+    },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "检索关键词。"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "organizer": { "type": "string", "description": "主办方。" },
+    "institution": { "type": "string", "description": "主办单位。" },
+    "organizer_type": {
+      "type": "string",
+      "enum": ["university", "institution", "enterprise", "society", "government"]
+    },
+    "province": { "type": "string", "description": "举办省份/直辖市。" },
+    "city": { "type": "string", "description": "举办城市。" },
+    "venue": { "type": "string", "description": "举办地点（场馆/线上）。" },
+    "start_date": { "type": "string", "format": "date", "description": "举办开始日期。" },
+    "end_date": { "type": "string", "format": "date", "description": "举办结束日期。" },
+    "registration_url": {
+      "type": ["string", "null"],
+      "description": "报名/登记入口链接。"
+    },
+    "registration_deadline": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "报名截止日期。"
+    },
+    "registration_requirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "报名条件归纳为清晰条目（资格/名额/费用/方式等）。"
+    },
+    "abstract_deadline": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "摘要/投稿截止日期。"
+    },
+    "url": { "type": "string", "description": "详情页链接。" },
+    "source_url": { "type": "string", "description": "抓取来源页链接。" },
+    "source_name": { "type": "string", "description": "来源名（官网/公众号/小红书号/抖音号）。" },
+    "source_type": {
+      "type": "string",
+      "enum": ["website", "wechat_mp", "xiaohongshu", "douyin", "rss", "manual"]
+    },
+    "summary": { "type": "string", "description": "简介摘要。" },
+    "status": {
+      "type": "string",
+      "enum": ["upcoming", "ongoing", "ended"]
+    },
+    "materials": {
+      "type": "array",
+      "description": "归档资料（回放视频/文档/PPT/纪要/总结）。",
+      "items": {
+        "type": "object",
+        "required": ["type", "title", "url"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["video", "slides", "document", "minutes", "summary"]
+          },
+          "title": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "first_seen": { "type": "string", "format": "date-time" },
+    "last_updated": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,23 @@
+<view class="seg">
+  <view class="seg-item {{tab === 'active' ? 'active' : ''}}" data-tab="active" bindtap="switchTab">活动（{{events.length}}）</view>
+  <view class="seg-item {{tab === 'archive' ? 'active' : ''}}" data-tab="archive" bindtap="switchTab">已结束·资料（{{archive.length}}）</view>
+</view>
+
+<view wx:if="{{loading}}" class="empty">加载中…</view>
+<view wx:elif="{{list.length === 0}}" class="empty">暂无活动</view>
+
+<view wx:for="{{list}}" wx:key="id" class="card" data-id="{{item.id}}" bindtap="goDetail">
+  <view class="card-title">{{item.title}}</view>
+  <view>
+    <text class="badge badge-domain" wx:for="{{item.domains}}" wx:for-item="d" wx:key="*this">{{d}}</text>
+    <text class="badge badge-type">{{item.typeLabel}}</text>
+    <text class="badge badge-ongoing" wx:if="{{item.status === 'ongoing'}}">进行中</text>
+  </view>
+  <view class="meta">
+    <view><b>时间</b>：{{item.start_date}} — {{item.end_date}}</view>
+    <view><b>地点</b>：{{item.province}} {{item.city}} · {{item.venue}}</view>
+  </view>
+  <view wx:if="{{tab === 'archive' && item.materials.length}}">
+    <text class="material" wx:for="{{item.materials}}" wx:for-item="m" wx:key="url">{{m.title}}</text>
+  </view>
+</view>

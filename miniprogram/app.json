@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarTitleText": "会议论坛信息聚合",
+    "navigationBarBackgroundColor": "#2f6bff",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f6f8",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

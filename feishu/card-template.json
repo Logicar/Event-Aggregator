@@ -1,0 +1,71 @@
+{
+  "config": {
+    "wide_screen_mode": true,
+    "enable_forward": true
+  },
+  "header": {
+    "template": "blue",
+    "title": {
+      "tag": "plain_text",
+      "content": "【会议信息】{{title}}"
+    }
+  },
+  "elements": [
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**领域**：{{domains}}\n**类型**：{{type}}"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**时间**：{{start_date}} 至 {{end_date}}\n**地点**：{{province}} {{city}} · {{venue}}"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**报名截止**：{{registration_deadline}}\n**报名条件**：{{registration_requirements}}\n**来源**：{{source_name}}"
+      }
+    },
+    {
+      "tag": "hr"
+    },
+    {
+      "tag": "note",
+      "elements": [
+        {
+          "tag": "plain_text",
+          "content": "点击下方按钮直达报名或查看详情"
+        }
+      ]
+    },
+    {
+      "tag": "action",
+      "actions": [
+        {
+          "tag": "button",
+          "text": {
+            "tag": "plain_text",
+            "content": "报名链接"
+          },
+          "type": "primary",
+          "url": "{{registration_url}}"
+        },
+        {
+          "tag": "button",
+          "text": {
+            "tag": "plain_text",
+            "content": "查看详情"
+          },
+          "type": "default",
+          "url": "{{url}}"
+        }
+      ]
+    }
+  ]
+}

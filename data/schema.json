@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://example.github.io/event-aggregator/data/schema.json",
+  "$id": "https://Logicar.github.io/Event-Aggregator/data/schema.json",
   "title": "Event",
   "description": "会议/论坛/讲座活动的规范化结构，活动 Feed 与归档 Feed 共用。",
   "type": "object",

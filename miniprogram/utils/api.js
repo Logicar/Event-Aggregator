@@ -1,5 +1,5 @@
 // Feed 拉取封装。将 BASE_URL 替换为你的 GitHub Pages 地址。
-const BASE_URL = 'https://<用户名>.github.io/<仓库名>/data/'
+const BASE_URL = 'https://Logicar.github.io/Event-Aggregator/data/'
 
 function fetchJSON(path) {
   return new Promise((resolve, reject) => {

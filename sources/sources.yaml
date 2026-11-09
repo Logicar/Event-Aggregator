@@ -8,7 +8,7 @@ version: 1
 defaults:
   rate_limit_ms: 1500        # 每请求最小间隔（毫秒）
   timeout_s: 20
-  user_agent: "EventAggregatorBot/1.0 (+https://github.com/example/event-aggregator)"
+  user_agent: "EventAggregatorBot/1.0 (+https://github.com/Logicar/Event-Aggregator)"
   max_retries: 3
   backoff_s: 5
 

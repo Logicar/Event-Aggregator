@@ -5,7 +5,7 @@
 const cloud = require('wx-server-sdk')
 cloud.init({ env: cloud.DYNAMIC_CURRENT_ENV })
 
-const FEED_URL = 'https://<用户名>.github.io/<仓库名>/data/events.json'
+const FEED_URL = 'https://Logicar.github.io/Event-Aggregator/data/events.json'
 
 exports.main = async () => {
   // TODO: 1) 拉取 Feed

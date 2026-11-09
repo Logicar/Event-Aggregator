@@ -6,8 +6,8 @@
 
 - 拥有飞书企业租户，并具备**妙搭应用**的创建/发布权限。
 - 数据 Feed 已公开可访问（GitHub Pages 发布后）：
-  - 活动 Feed：`https://<用户名>.github.io/<仓库名>/data/events.json`
-  - 归档 Feed：`https://<用户名>.github.io/<仓库名>/data/archive.json`
+  - 活动 Feed：`https://Logicar.github.io/Event-Aggregator/data/events.json`
+  - 归档 Feed：`https://Logicar.github.io/Event-Aggregator/data/archive.json`
 
 ## 1. 创建妙搭应用
 
@@ -41,7 +41,7 @@
 ### 步骤 2 — HTTP 请求（拉取 Feed）
 - 动作：**调用外部接口 / HTTP 请求**
 - 方法：`GET`
-- URL：`https://<用户名>.github.io/<仓库名>/data/events.json`
+- URL：`https://Logicar.github.io/Event-Aggregator/data/events.json`
 - 解析响应体中的 `events` 数组。
 
 ### 步骤 3 — 循环处理每条活动

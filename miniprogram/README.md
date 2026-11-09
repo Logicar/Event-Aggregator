@@ -7,7 +7,7 @@
 1. 注册微信公众平台小程序账号，获取 **AppID**。
 2. 在 `project.config.json` 中填入 `appid`。
 3. 开通 **云开发**（用于订阅消息定时推送），在 `app.js` 中填入云环境 ID。
-4. 数据 Feed 已公开：`https://<用户名>.github.io/<仓库名>/data/events.json`（在 `utils/api.js` 配置）。
+4. 数据 Feed 已公开：`https://Logicar.github.io/Event-Aggregator/data/events.json`（在 `utils/api.js` 配置）。
 5. 在小程序后台把 `*.github.io` 加入 **request 合法域名**。
 
 ## 功能

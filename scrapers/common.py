@@ -9,7 +9,7 @@ import urllib.robotparser
 from dataclasses import dataclass
 from typing import Optional
 
-DEFAULT_UA = "EventAggregatorBot/1.0 (+https://github.com/example/event-aggregator)"
+DEFAULT_UA = "EventAggregatorBot/1.0 (+https://github.com/Logicar/Event-Aggregator)"
 
 
 @dataclass

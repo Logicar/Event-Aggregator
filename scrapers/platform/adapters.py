@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from typing import List
 
-from ...pipeline.models import Event
+from pipeline.models import Event
 
 
 def fetch_candidates(source: dict) -> List[Event]:

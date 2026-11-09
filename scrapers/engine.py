@@ -3,9 +3,9 @@ from __future__ import annotations
 
 from typing import List
 
-from ..pipeline.models import Event
-from ..pipeline.normalize import parse_date_range, split_requirements
-from .common import HttpClient, allow_by_robots
+from pipeline.models import Event
+from pipeline.normalize import parse_date_range, split_requirements
+from scrapers.common import HttpClient, allow_by_robots
 
 
 def _load_yaml(path: str) -> dict:

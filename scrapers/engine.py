@@ -103,10 +103,17 @@ def scrape_all(config_path: str) -> List[Event]:
         backoff_s=defaults.get("backoff_s", 5),
     )
 
+    from scrapers.sites import ADAPTERS
+
     events: List[Event] = []
     for source in config.get("sources", {}).get("website", []):
         if not source.get("enabled"):
             print(f"[scrape] 未启用 {source.get('name')}，跳过")
             continue
-        events.extend(_scrape_generic_list(source, client))
+        adapter = source.get("adapter")
+        if adapter in ADAPTERS:
+            print(f"[scrape] 抓取 {source.get('name')}（adapter={adapter}）")
+            events.extend(ADAPTERS[adapter](source, client))
+        else:
+            events.extend(_scrape_generic_list(source, client))
     return events

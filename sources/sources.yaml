@@ -44,23 +44,23 @@ sources:
 
     - name: 中国药学会
       base_url: https://www.cpa.org.cn
-      list_url: ""
+      list_url: "https://www.cpa.org.cn/?do=infolist&classid=270"
       category: 学会/机构
       domains: [医学药学]
-      fields: [药学]
-      adapter: generic_list
-      enabled: false
-      selectors: { item: "", title: "", link: "", date: "" }
+      fields: [药学, 临床药学, 药物制剂]
+      adapter: cpa
+      organizer_type: society
+      enabled: true
 
     - name: 中国人工智能学会
       base_url: https://www.caai.cn
-      list_url: ""
+      list_url: "https://www.caai.cn/site/term/14.html"
       category: 学会/机构
       domains: [AI4Science]
       fields: [人工智能, AI4Science]
-      adapter: generic_list
-      enabled: false
-      selectors: { item: "", title: "", link: "", date: "" }
+      adapter: caai
+      organizer_type: society
+      enabled: true
 
     - name: 北京大学（生命科学/医学/AI 院系通知）
       base_url: https://www.pku.edu.cn

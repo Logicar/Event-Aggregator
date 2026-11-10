@@ -1,102 +1,115 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-06T23:08:00+08:00",
-  "count": 2,
+  "generated_at": "2026-11-10T21:15:24+08:00",
+  "count": 3,
   "events": [
     {
-      "id": "evt_20260927_53865d32014528a1",
-      "title": "生命科学大数据与 AI 应用讲座（已结束）",
-      "type": "lecture",
-      "domains": [
-        "生命科学",
-        "AI4Science"
-      ],
-      "province": "北京",
-      "city": "北京",
-      "venue": "某高校报告厅",
-      "start_date": "2026-09-27",
-      "end_date": "2026-09-27",
-      "url": "https://example.com/event/bio-ai-lecture",
-      "source_url": "https://example.com/events/archive",
-      "source_name": "某高校生命科学学院",
-      "source_type": "website",
-      "status": "ended",
-      "fields": [
-        "生物信息学",
-        "AI"
-      ],
-      "keywords": [
-        "生物信息",
-        "讲座"
-      ],
-      "tags": [
-        "回放"
-      ],
-      "organizer": "某高校生命科学学院",
-      "institution": "某高校",
-      "organizer_type": "university",
-      "registration_requirements": [],
-      "summary": "已结束的讲座，提供回放与讲义下载。",
-      "materials": [
-        {
-          "type": "video",
-          "title": "讲座回放视频",
-          "url": "https://example.com/video/bio-ai"
-        },
-        {
-          "type": "slides",
-          "title": "讲座 PPT 下载",
-          "url": "https://example.com/slides/bio-ai.pdf"
-        },
-        {
-          "type": "summary",
-          "title": "讲座纪要",
-          "url": "https://example.com/notes/bio-ai"
-        }
-      ],
-      "first_seen": "2026-11-06",
-      "last_updated": "2026-11-06"
-    },
-    {
-      "id": "evt_20260808_fb60549926dca6b4",
-      "title": "药物研发行业会议（已结束）",
+      "id": "evt_20261103_d5b9b16a606c526a",
+      "title": "关于举办中国药学会海洋药物专业委员会第十七届学术年会的通知（第三轮）",
       "type": "conference",
       "domains": [
         "医学药学"
       ],
-      "province": "江苏",
-      "city": "苏州",
-      "venue": "苏州工业园区",
-      "start_date": "2026-08-08",
-      "end_date": "2026-08-10",
-      "url": "https://example.com/event/drug-rd",
-      "source_url": "https://example.com/company/events",
-      "source_name": "某生物医药企业官网",
+      "province": "山东",
+      "city": "济南",
+      "venue": "待确认",
+      "start_date": "2026-11-03",
+      "end_date": "2026-11-03",
+      "url": "https://www.cpa.org.cn/?do=info&cid=79153",
+      "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
+      "source_name": "中国药学会",
       "source_type": "website",
       "status": "ended",
       "fields": [
-        "药物研发"
+        "药学",
+        "临床药学"
       ],
-      "keywords": [
-        "药物研发"
-      ],
-      "tags": [
-        "企业"
-      ],
-      "organizer": "某生物医药企业",
-      "institution": "某生物医药企业",
-      "organizer_type": "enterprise",
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国药学会",
+      "institution": "中国药学会",
+      "organizer_type": "society",
+      "registration_url": "https://www.cpa.org.cn/?do=info&cid=79153",
       "registration_requirements": [],
-      "summary": "已结束的行业会议，暂缺回放资料。",
       "materials": [
         {
           "type": "summary",
           "title": "原文/回顾入口",
-          "url": "https://example.com/event/drug-rd"
+          "url": "https://www.cpa.org.cn/?do=info&cid=79153"
         }
+      ]
+    },
+    {
+      "id": "evt_20261106_174c3ec6bdf8f072",
+      "title": "关于召开2026年中国药学会药物流行病学学术年会的通知（第三轮）",
+      "type": "conference",
+      "domains": [
+        "医学药学"
       ],
-      "first_seen": "2026-11-06",
-      "last_updated": "2026-11-06"
+      "province": "上海",
+      "city": "上海",
+      "venue": "上海明捷万丽酒店（上海市普陀区铜川路50号）",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-06",
+      "url": "https://www.cpa.org.cn/?do=info&cid=79135",
+      "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
+      "source_name": "中国药学会",
+      "source_type": "website",
+      "status": "ended",
+      "fields": [
+        "药学",
+        "临床药学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国药学会",
+      "institution": "中国药学会",
+      "organizer_type": "society",
+      "registration_url": "https://www.cpa.org.cn/?do=info&cid=79135",
+      "registration_requirements": [],
+      "materials": [
+        {
+          "type": "summary",
+          "title": "原文/回顾入口",
+          "url": "https://www.cpa.org.cn/?do=info&cid=79135"
+        }
+      ]
+    },
+    {
+      "id": "evt_20261106_d53a9b96fe7a103a",
+      "title": "第十九届中国智能机器人大会会议通知",
+      "type": "conference",
+      "domains": [
+        "AI4Science"
+      ],
+      "province": "陕西",
+      "city": "西安",
+      "venue": "西安市曲江惠宾苑宾馆（西安雁塔南路388号）",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-08",
+      "url": "https://www.caai.cn/site/content/11432.html",
+      "source_url": "https://www.caai.cn/site/term/14.html",
+      "source_name": "中国人工智能学会",
+      "source_type": "website",
+      "status": "ended",
+      "fields": [
+        "人工智能",
+        "AI4Science"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国人工智能学会",
+      "institution": "中国人工智能学会",
+      "organizer_type": "society",
+      "registration_url": "https://www.caai.cn/site/content/11432.html",
+      "registration_requirements": [],
+      "materials": [
+        {
+          "type": "summary",
+          "title": "原文/回顾入口",
+          "url": "https://www.caai.cn/site/content/11432.html"
+        }
+      ]
     }
   ]
 }

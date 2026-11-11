@@ -5,3 +5,6 @@ lxml>=5.0
 beautifulsoup4>=4.12
 PyYAML>=6.0
 jsonschema>=4.20
+# WAF + JS 渲染站点（如 CCF）需要；启用后 CI 会执行 `playwright install chromium`
+playwright>=1.40
+

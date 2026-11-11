@@ -1,6 +1,7 @@
 """各站点专用抓取器：列表 + 详情页解析（时间/地点/主办方）。"""
 from __future__ import annotations
 
+import calendar
 import re
 from typing import List, Optional
 from urllib.parse import urljoin
@@ -100,7 +101,7 @@ def build_event(source: dict, list_url: str, title: str, detail_url: str,
     for t in (venue, title, body_text):
         if t:
             p, c = infer_region(t)
-            if c != "待确认":
+            if p != "待确认" or c != "待确认":
                 province, city = p, c
                 break
     return Event(
@@ -262,9 +263,114 @@ def scrape_gsc(source: dict, client) -> List[Event]:
     return _scrape_generic_detail(source, client, source["list_url"], r"a\d+\.html", "中国遗传学会")
 
 
+def _clean_cell(s: str) -> str:
+    s = re.sub(r"<[^>]+>", " ", s)
+    s = (s.replace("&nbsp;", " ").replace("&ndash;", "-").replace("&mdash;", "—")
+           .replace("&ldquo;", "\u201c").replace("&rdquo;", "\u201d")
+           .replace("&amp;", "&").replace("&gt;", ">").replace("&lt;", "<"))
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def parse_plan_date(text: str) -> tuple:
+    """解析活动计划里的日期：支持完整范围/单日/仅年月（取当月首末日）。"""
+    text = (text or "").strip()
+    if not text:
+        return None, None
+    s, e = parse_date_range(text)
+    if s:
+        return s, e
+    m = re.search(r"(\d{4})\s*年\s*(\d{1,2})\s*月", text)
+    if m:
+        y, mo = int(m.group(1)), int(m.group(2))
+        if 1 <= mo <= 12:
+            last = calendar.monthrange(y, mo)[1]
+            return f"{y}-{mo:02d}-01", f"{y}-{mo:02d}-{last:02d}"
+    return None, None
+
+
+def scrape_gsc_plan(source: dict, client) -> List[Event]:
+    """中国遗传学会「活动计划」表格：序号|活动名称|参与方式|举办地点|规模|时间|分支机构。"""
+    list_url = source["list_url"]
+    res = client.get(list_url)
+    if not res:
+        return []
+    events: List[Event] = []
+    for tb in re.findall(r"<table[^>]*>(.*?)</table>", res.html, re.S | re.I):
+        for row in re.findall(r"<tr[^>]*>(.*?)</tr>", tb, re.S | re.I):
+            cells = [_clean_cell(c) for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row, re.S | re.I)]
+            if len(cells) < 7 or not cells[0].isdigit():
+                continue
+            title, venue, date_text, branch = cells[1], cells[3], cells[5], cells[6]
+            if not title:
+                continue
+            start, end = parse_plan_date(date_text)
+            if not start:
+                continue
+            organizer = f"中国遗传学会（{branch}）" if branch else "中国遗传学会"
+            events.append(
+                build_event(source, list_url, title, list_url, start, end,
+                            venue or None, organizer, body_text=venue)
+            )
+            if len(events) >= 40:
+                break
+    return events
+
+
+# ── 中国计算机学会 CCF（WAF + JS 渲染，用 Playwright）──────
+def scrape_ccf(source: dict, client) -> List[Event]:
+    """CCF：阿里云 WAF + SPA，用 Playwright 渲染列表页与详情页后解析。"""
+    try:
+        from scrapers.browser import render_html
+    except ImportError:
+        print("[ccf] 未安装 playwright，跳过（CI 会安装）")
+        return []
+
+    list_url = source["list_url"]
+    try:
+        html = render_html(list_url, wait_ms=6000)
+    except Exception as e:
+        print(f"[ccf] 渲染失败 {list_url}: {e}")
+        return []
+
+    # 从渲染后的 DOM 提取会议相关链接
+    items = {}
+    for m in re.finditer(r"<a\s+([^>]*?)>(.*?)</a>", html, re.S | re.I):
+        tag, inner = m.group(1), m.group(2)
+        hm = re.search(r'href=["\']([^"\']+)["\']', tag, re.I)
+        if not hm:
+            continue
+        href = hm.group(1)
+        if href.startswith(("#", "javascript:", "mailto:")):
+            continue
+        text = re.sub(r"<[^>]+>", " ", inner)
+        text = re.sub(r"\s+", " ", text).strip()
+        if not text or not CONFERENCE_KW.search(text):
+            continue
+        full = urljoin(list_url, href)
+        if full not in items or len(text) > len(items[full]):
+            items[full] = text
+
+    events: List[Event] = []
+    for detail_url, title in list(items.items())[:8]:
+        try:
+            dhtml = render_html(detail_url, wait_ms=3000)
+        except Exception:
+            continue
+        text = strip_html(dhtml)
+        start, end = extract_date(text)
+        if not start:
+            continue
+        venue = extract_venue(text)
+        organizer = extract_organizer(text, "中国计算机学会")
+        events.append(build_event(source, list_url, title, detail_url, start, end, venue, organizer, body_text=text))
+    return events
+
+
 ADAPTERS = {
     "cpa": scrape_cpa,
     "caai": scrape_caai,
     "botany": scrape_botany,
     "gsc": scrape_gsc,
+    "gsc_plan": scrape_gsc_plan,
+    "ccf": scrape_ccf,
 }

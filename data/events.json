@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T09:48:33+08:00",
-  "count": 13,
+  "generated_at": "2026-11-11T10:12:53+08:00",
+  "count": 19,
   "events": [
     {
       "id": "evt_20261116_d36e7a649e967927",
@@ -312,6 +312,180 @@
       "materials": []
     },
     {
+      "id": "evt_20261101_6db963296490b5ae",
+      "title": "时空病理国际论坛/暨时空病理联盟会议",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "重庆",
+      "city": "重庆",
+      "venue": "重庆",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-30",
+      "url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_name": "中国遗传学会",
+      "source_type": "website",
+      "status": "ongoing",
+      "fields": [
+        "遗传学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国遗传学会（时空细胞组学分会）",
+      "institution": "中国遗传学会（时空细胞组学分会）",
+      "organizer_type": "society",
+      "registration_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "registration_requirements": [],
+      "materials": []
+    },
+    {
+      "id": "evt_20261101_9ea69b3abe326fae",
+      "title": "心脑血管时空组学国际研讨会",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "北京",
+      "city": "北京",
+      "venue": "北京",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-30",
+      "url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_name": "中国遗传学会",
+      "source_type": "website",
+      "status": "ongoing",
+      "fields": [
+        "遗传学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国遗传学会（时空细胞组学分会）",
+      "institution": "中国遗传学会（时空细胞组学分会）",
+      "organizer_type": "society",
+      "registration_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "registration_requirements": [],
+      "materials": []
+    },
+    {
+      "id": "evt_20261101_3acc4fe9e4fd0587",
+      "title": "中国遗传学会动物遗传专业委员会2026年学术年会",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "广东",
+      "city": "佛山",
+      "venue": "广东省佛山市",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-30",
+      "url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_name": "中国遗传学会",
+      "source_type": "website",
+      "status": "ongoing",
+      "fields": [
+        "遗传学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国遗传学会（动物遗传专业委员会）",
+      "institution": "中国遗传学会（动物遗传专业委员会）",
+      "organizer_type": "society",
+      "registration_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "registration_requirements": [],
+      "materials": []
+    },
+    {
+      "id": "evt_20261101_a6f724ddc019ced0",
+      "title": "眼科细胞基因治疗论坛",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "北京",
+      "city": "北京",
+      "venue": "北京市",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-30",
+      "url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_name": "中国遗传学会",
+      "source_type": "website",
+      "status": "ongoing",
+      "fields": [
+        "遗传学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国遗传学会（眼科遗传病研究专业委员会）",
+      "institution": "中国遗传学会（眼科遗传病研究专业委员会）",
+      "organizer_type": "society",
+      "registration_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "registration_requirements": [],
+      "materials": []
+    },
+    {
+      "id": "evt_20261101_8c09395b9cff0eb8",
+      "title": "中国遗传学会遗传诊断分会年会",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "待确认",
+      "city": "待确认",
+      "venue": "贵州",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-30",
+      "url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_name": "中国遗传学会",
+      "source_type": "website",
+      "status": "ongoing",
+      "fields": [
+        "遗传学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国遗传学会（遗传诊断分会）",
+      "institution": "中国遗传学会（遗传诊断分会）",
+      "organizer_type": "society",
+      "registration_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "registration_requirements": [],
+      "materials": []
+    },
+    {
+      "id": "evt_20261101_4b8cc9b4df6d7aba",
+      "title": "中国遗传学会团体标准立项审查会议",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "上海",
+      "city": "上海",
+      "venue": "上海",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-30",
+      "url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "source_name": "中国遗传学会",
+      "source_type": "website",
+      "status": "ongoing",
+      "fields": [
+        "遗传学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国遗传学会（标准化技术委员会）",
+      "institution": "中国遗传学会（标准化技术委员会）",
+      "organizer_type": "society",
+      "registration_url": "https://www.gsc.ac.cn/site-cciubsofficial/c199",
+      "registration_requirements": [],
+      "materials": []
+    },
+    {
       "id": "evt_20261217_c369cd8bde5a17ff",
       "title": "早期优惠延迟至11月10日‌|第三届植物科学前沿学术大会第二轮通知",
       "type": "conference",
@@ -347,8 +521,8 @@
       "domains": [
         "生命科学"
       ],
-      "province": "北京",
-      "city": "北京",
+      "province": "江西",
+      "city": "待确认",
       "venue": "江西省、中国科学院庐山植物园山南分园先骕楼",
       "start_date": "2026-11-13",
       "end_date": "2026-11-13",

@@ -69,15 +69,15 @@ sources:
       selectors: {}
 
     - name: 中国遗传学会
-      base_url: "https://www.gsc.ac.cn"
+      base_url: "https://www.gsc.ac.cn/site-cciubsofficial/"
+      list_url: "https://www.gsc.ac.cn/site-cciubsofficial/c199"
       category: 学会
       domains: [生命科学]
       fields: [遗传学]
-      adapter: generic_list
-      note: "列表页多为会后新闻（日期=发布日、地点=学会地址），待改用会议报名页 members.gsc.ac.cn"
+      adapter: gsc_plan
+      organizer_type: society
       batch: 1
-      enabled: false
-      selectors: {}
+      enabled: true
 
     - name: 中国植物学会
       base_url: "http://www.botany.org.cn"
@@ -245,14 +245,15 @@ sources:
     # -- AI / 计算机 --
     - name: 中国计算机学会（CCF）
       base_url: "https://www.ccf.org.cn"
+      list_url: "https://www.ccf.org.cn/"
       category: 学会
       domains: [AI4Science]
       fields: [计算机科学]
-      adapter: generic_list
-      note: "站点为阿里云WAF+JS渲染，静态抓取无内容，需接口/Playwright"
+      adapter: ccf
+      organizer_type: society
+      note: "WAF+SPA，已用 Playwright 渲染抓取；list_url 建议改为 CCF 会议列表页以提高准确度，需在 CI 验证后开启"
       batch: 1
       enabled: false
-      selectors: {}
 
     - name: 中国自动化学会
       base_url: "http://www.caa.org.cn"            # 需核验

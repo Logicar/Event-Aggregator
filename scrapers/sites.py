@@ -33,8 +33,16 @@ def strip_html(html: str) -> str:
     return re.sub(r"\s+", " ", html).strip()
 
 
+PROVINCE_NAMES = [
+    "北京", "天津", "上海", "重庆", "河北", "山西", "辽宁", "吉林", "黑龙江",
+    "江苏", "浙江", "安徽", "福建", "江西", "山东", "河南", "湖北", "湖南",
+    "广东", "广西", "海南", "四川", "贵州", "云南", "西藏", "陕西", "甘肃",
+    "青海", "宁夏", "新疆", "内蒙古",
+]
+
+
 def infer_region(text: str) -> tuple:
-    """从文本推断 (province, city)，取文本中最早出现的已知城市。"""
+    """从文本推断 (province, city)，取文本中最早出现的已知城市；无城市时回退到省份。"""
     if not text:
         return "待确认", "待确认"
     best_pos: Optional[int] = None
@@ -44,33 +52,43 @@ def infer_region(text: str) -> tuple:
         if pos != -1 and (best_pos is None or pos < best_pos):
             best_pos = pos
             best = (prov, city)
-    return best if best else ("待确认", "待确认")
+    if best:
+        return best
+    # 无已知城市，尝试省名（如「江西省」）
+    for p in PROVINCE_NAMES:
+        if (p + "省") in text or (p + "市") in text:
+            return p, "待确认"
+    return "待确认", "待确认"
 
 
 def extract_date(text: str) -> tuple:
     """从正文提取会议日期，返回 (start, end) ISO。"""
-    # 排除「发布时间/报名时间/注册时间」等，只匹配「会议时间/时间」
+    # 1) 会议时间/时间（排除 发布/报名/注册/投稿/摘要/报到），支持 17-20 日期范围
     m = re.search(
         r"(?<!发布)(?<!报名)(?<!注册)(?<!投稿)(?<!摘要)(?<!报到)"
-        r"时间[：:]\s*(\d{4}\s*年\s*\d{1,2}\s*月\s*\d{1,2}\s*日[^，。；\s]{0,14})",
+        r"时间\s*[：:]\s*(\d{4}\s*年\s*\d{1,2}\s*月\s*\d{1,2}\s*日?[^。；\n]{0,20})",
         text,
     )
     if m:
         return parse_date_range(m.group(1))
-    # 兜底：找正文里第一个「2026年X月X日」日期
-    m2 = re.search(r"\d{4}\s*年\s*\d{1,2}\s*月\s*\d{1,2}\s*日[^，。；\s]{0,14}", text)
+    # 2) 定于/将于/拟于 + 日期
+    m2 = re.search(r"(?:定于|将于|拟于)\s*(\d{4}\s*年\s*\d{1,2}\s*月\s*\d{1,2}\s*日?[^。；\n]{0,20})", text)
     if m2:
-        return parse_date_range(m2.group(0))
+        return parse_date_range(m2.group(1))
+    # 3) 兜底：第一个完整日期（含范围）
+    m3 = re.search(r"\d{4}\s*年\s*\d{1,2}\s*月\s*\d{1,2}\s*日?(?:\s*[-~至—]\s*\d{1,2}\s*日)?", text)
+    if m3:
+        return parse_date_range(m3.group(0))
     return None, None
 
 
 def extract_venue(text: str) -> Optional[str]:
-    m = re.search(r"(?:会议|举办|报到)?地点[：:]\s*([^\s，。；；]{2,80})", text)
+    m = re.search(r"(?:会议|举办|报到|召开)?(?:地点|地址)\s*[：:]\s*([^\s，。；；]{2,100})", text)
     return m.group(1).strip(" ，。；、") if m else None
 
 
 def extract_organizer(text: str, default: Optional[str] = None) -> Optional[str]:
-    m = re.search(r"主办单位[：:]\s*([^\s，。；；]{2,60})", text)
+    m = re.search(r"主办单位\s*[：:]\s*([^\s，。；；]{2,60})", text)
     return m.group(1).strip(" ，。；、") if m else default
 
 
@@ -184,7 +202,69 @@ def scrape_caai(source: dict, client) -> List[Event]:
     return events
 
 
+def _extract_items(html: str, list_url: str, href_re: str) -> dict:
+    """从列表页提取 {详情URL: 标题}，同 URL 保留最长标题。
+
+    链接文字为「查看详情/更多」等通用词时，回退读取 <a title="..."> 属性。
+    """
+    items = {}
+    for m in re.finditer(r"<a\s+([^>]*?)>(.*?)</a>", html, re.S | re.I):
+        tag, inner = m.group(1), m.group(2)
+        hm = re.search(r'href=["\']([^"\']+)["\']', tag, re.I)
+        if not hm:
+            continue
+        href = hm.group(1)
+        if not re.search(href_re, href):
+            continue
+        title = re.sub(r"<[^>]+>", " ", inner)
+        title = re.sub(r"\s+", " ", title).strip()
+        if len(title) < 2 or title in ("查看详情", "更多", "详情", "阅读全文"):
+            tm = re.search(r'title=["\']([^"\']+)["\']', tag, re.I)
+            if tm:
+                title = tm.group(1).strip()
+        if not title:
+            continue
+        full = urljoin(list_url, href)
+        if full not in items or len(title) > len(items[full]):
+            items[full] = title
+    return items
+
+
+def _scrape_generic_detail(source: dict, client, list_url: str, href_re: str, default_org: str) -> List[Event]:
+    res = client.get(list_url)
+    if not res:
+        return []
+    items = _extract_items(res.html, list_url, href_re)
+    events: List[Event] = []
+    for detail_url, title in items.items():
+        if not CONFERENCE_KW.search(title):
+            continue
+        detail = client.get(detail_url)
+        text = strip_html(detail.html) if detail else ""
+        start, end = extract_date(text)
+        if not start:
+            continue
+        venue = extract_venue(text)
+        organizer = extract_organizer(text, default_org)
+        events.append(build_event(source, list_url, title, detail_url, start, end, venue, organizer, body_text=text))
+        if len(events) >= 12:
+            break
+    return events
+
+
+# ── 中国植物学会（通知公告栏目）────────────────────────────
+def scrape_botany(source: dict, client) -> List[Event]:
+    return _scrape_generic_detail(source, client, source["list_url"], r"t\d{8}_\d+\.html", "中国植物学会")
+
+
+# ── 中国遗传学会（学术会议栏目）────────────────────────────
+def scrape_gsc(source: dict, client) -> List[Event]:
+    return _scrape_generic_detail(source, client, source["list_url"], r"a\d+\.html", "中国遗传学会")
+
+
 ADAPTERS = {
     "cpa": scrape_cpa,
     "caai": scrape_caai,
+    "botany": scrape_botany,
+    "gsc": scrape_gsc,
 }

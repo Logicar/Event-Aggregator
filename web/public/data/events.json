@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-10T21:15:24+08:00",
-  "count": 10,
+  "generated_at": "2026-11-11T09:48:33+08:00",
+  "count": 13,
   "events": [
     {
-      "id": "evt_20261118_97ddb9a48a11889d",
+      "id": "evt_20261116_d36e7a649e967927",
       "title": "关于召开第十届中国药学会基层医院药学学术年会的通知（第二轮）",
       "type": "conference",
       "domains": [
@@ -13,8 +13,8 @@
       "province": "浙江",
       "city": "宁波",
       "venue": "宁波南苑饭店（浙江省宁波市海曙区灵桥路2号",
-      "start_date": "2026-11-18",
-      "end_date": "2026-11-18",
+      "start_date": "2026-11-16",
+      "end_date": "2026-11-22",
       "url": "https://www.cpa.org.cn/?do=info&cid=79160",
       "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
       "source_name": "中国药学会",
@@ -22,7 +22,8 @@
       "status": "upcoming",
       "fields": [
         "药学",
-        "临床药学"
+        "临床药学",
+        "药物制剂"
       ],
       "keywords": [],
       "tags": [],
@@ -52,7 +53,8 @@
       "status": "upcoming",
       "fields": [
         "药学",
-        "临床药学"
+        "临床药学",
+        "药物制剂"
       ],
       "keywords": [],
       "tags": [],
@@ -64,16 +66,16 @@
       "materials": []
     },
     {
-      "id": "evt_20261121_50f541ff3b62ae26",
+      "id": "evt_20261120_115ecbd3b59768e9",
       "title": "关于举办第十九届药物制剂学术大会的通知（第三轮）",
       "type": "conference",
       "domains": [
         "医学药学"
       ],
-      "province": "广东",
-      "city": "广州",
-      "venue": "待确认",
-      "start_date": "2026-11-21",
+      "province": "北京",
+      "city": "北京",
+      "venue": "北京市东城区天坛西里2号（100050）",
+      "start_date": "2026-11-20",
       "end_date": "2026-11-22",
       "url": "https://www.cpa.org.cn/?do=info&cid=79154",
       "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
@@ -82,7 +84,8 @@
       "status": "upcoming",
       "fields": [
         "药学",
-        "临床药学"
+        "临床药学",
+        "药物制剂"
       ],
       "keywords": [],
       "tags": [],
@@ -112,7 +115,8 @@
       "status": "upcoming",
       "fields": [
         "药学",
-        "临床药学"
+        "临床药学",
+        "药物制剂"
       ],
       "keywords": [],
       "tags": [],
@@ -132,7 +136,7 @@
       ],
       "province": "四川",
       "city": "成都",
-      "venue": "待确认",
+      "venue": "四川省成都市",
       "start_date": "2026-12-04",
       "end_date": "2026-12-06",
       "url": "https://www.cpa.org.cn/?do=info&cid=79151",
@@ -142,7 +146,8 @@
       "status": "upcoming",
       "fields": [
         "药学",
-        "临床药学"
+        "临床药学",
+        "药物制剂"
       ],
       "keywords": [],
       "tags": [],
@@ -172,7 +177,8 @@
       "status": "ongoing",
       "fields": [
         "药学",
-        "临床药学"
+        "临床药学",
+        "药物制剂"
       ],
       "keywords": [],
       "tags": [],
@@ -202,7 +208,8 @@
       "status": "upcoming",
       "fields": [
         "药学",
-        "临床药学"
+        "临床药学",
+        "药物制剂"
       ],
       "keywords": [],
       "tags": [],
@@ -232,7 +239,8 @@
       "status": "upcoming",
       "fields": [
         "药学",
-        "临床药学"
+        "临床药学",
+        "药物制剂"
       ],
       "keywords": [],
       "tags": [],
@@ -300,6 +308,93 @@
       "institution": "中国人工智能学会（CAAI）",
       "organizer_type": "society",
       "registration_url": "https://www.caai.cn/site/content/11492.html",
+      "registration_requirements": [],
+      "materials": []
+    },
+    {
+      "id": "evt_20261217_c369cd8bde5a17ff",
+      "title": "早期优惠延迟至11月10日‌|第三届植物科学前沿学术大会第二轮通知",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "福建",
+      "city": "福州",
+      "venue": "福建省福州市闽江世纪金源会展中心大饭店",
+      "start_date": "2026-12-17",
+      "end_date": "2026-12-20",
+      "url": "http://www.botany.org.cn/xwzx/tzgg/202610/t20261030_863524.html",
+      "source_url": "http://www.botany.org.cn/xwzx/tzgg/",
+      "source_name": "中国植物学会",
+      "source_type": "website",
+      "status": "upcoming",
+      "fields": [
+        "植物学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国植物学会",
+      "institution": "中国植物学会",
+      "organizer_type": "society",
+      "registration_url": "http://www.botany.org.cn/xwzx/tzgg/202610/t20261030_863524.html",
+      "registration_requirements": [],
+      "materials": []
+    },
+    {
+      "id": "evt_20261113_09a645e980a5ba25",
+      "title": "中国植物学会古植物分会第二十四届学术年会第二轮通知",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "北京",
+      "city": "北京",
+      "venue": "江西省、中国科学院庐山植物园山南分园先骕楼",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-13",
+      "url": "http://www.botany.org.cn/xwzx/tzgg/202610/t20261021_862426.html",
+      "source_url": "http://www.botany.org.cn/xwzx/tzgg/",
+      "source_name": "中国植物学会",
+      "source_type": "website",
+      "status": "upcoming",
+      "fields": [
+        "植物学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国植物学会",
+      "institution": "中国植物学会",
+      "organizer_type": "society",
+      "registration_url": "http://www.botany.org.cn/xwzx/tzgg/202610/t20261021_862426.html",
+      "registration_requirements": [],
+      "materials": []
+    },
+    {
+      "id": "evt_20261217_a3a266d76b7d27c6",
+      "title": "中国植物学会第三届植物科学前沿学术大会第一轮通知",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "福建",
+      "city": "福州",
+      "venue": "福建省福州市",
+      "start_date": "2026-12-17",
+      "end_date": "2026-12-20",
+      "url": "http://www.botany.org.cn/xwzx/tzgg/202607/t20260707_848910.html",
+      "source_url": "http://www.botany.org.cn/xwzx/tzgg/",
+      "source_name": "中国植物学会",
+      "source_type": "website",
+      "status": "upcoming",
+      "fields": [
+        "植物学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国植物学会",
+      "institution": "中国植物学会",
+      "organizer_type": "society",
+      "registration_url": "http://www.botany.org.cn/xwzx/tzgg/202607/t20260707_848910.html",
       "registration_requirements": [],
       "materials": []
     }

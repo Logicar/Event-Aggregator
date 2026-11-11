@@ -69,24 +69,26 @@ sources:
       selectors: {}
 
     - name: 中国遗传学会
-      base_url: "https://www.gsc.ac.cn"            # 需核验
+      base_url: "https://www.gsc.ac.cn"
       category: 学会
       domains: [生命科学]
       fields: [遗传学]
       adapter: generic_list
+      note: "列表页多为会后新闻（日期=发布日、地点=学会地址），待改用会议报名页 members.gsc.ac.cn"
       batch: 1
       enabled: false
       selectors: {}
 
     - name: 中国植物学会
-      base_url: "http://www.botany.org.cn"         # 需核验
+      base_url: "http://www.botany.org.cn"
+      list_url: "http://www.botany.org.cn/xwzx/tzgg/"
       category: 学会
       domains: [生命科学]
       fields: [植物学]
-      adapter: generic_list
+      adapter: botany
+      organizer_type: society
       batch: 1
-      enabled: false
-      selectors: {}
+      enabled: true
 
     - name: 中国动物学会
       base_url: "http://czs.ioz.ac.cn"             # 需核验
@@ -99,11 +101,12 @@ sources:
       selectors: {}
 
     - name: 中国微生物学会
-      base_url: "http://www.csmc.org.cn"           # 需核验
+      base_url: "http://www.csmc.org.cn"
       category: 学会
       domains: [生命科学]
       fields: [微生物学]
       adapter: generic_list
+      note: "域名 csmc.org.cn 解析失败，需确认正确域名后接入"
       batch: 1
       enabled: false
       selectors: {}
@@ -241,11 +244,12 @@ sources:
 
     # -- AI / 计算机 --
     - name: 中国计算机学会（CCF）
-      base_url: "https://www.ccf.org.cn"           # 需核验
+      base_url: "https://www.ccf.org.cn"
       category: 学会
       domains: [AI4Science]
       fields: [计算机科学]
       adapter: generic_list
+      note: "站点为阿里云WAF+JS渲染，静态抓取无内容，需接口/Playwright"
       batch: 1
       enabled: false
       selectors: {}

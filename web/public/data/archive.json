@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-10T21:15:24+08:00",
-  "count": 3,
+  "generated_at": "2026-11-11T09:48:33+08:00",
+  "count": 8,
   "events": [
     {
       "id": "evt_20261103_d5b9b16a606c526a",
@@ -22,7 +22,8 @@
       "status": "ended",
       "fields": [
         "药学",
-        "临床药学"
+        "临床药学",
+        "药物制剂"
       ],
       "keywords": [],
       "tags": [],
@@ -58,7 +59,8 @@
       "status": "ended",
       "fields": [
         "药学",
-        "临床药学"
+        "临床药学",
+        "药物制剂"
       ],
       "keywords": [],
       "tags": [],
@@ -108,6 +110,181 @@
           "type": "summary",
           "title": "原文/回顾入口",
           "url": "https://www.caai.cn/site/content/11432.html"
+        }
+      ]
+    },
+    {
+      "id": "evt_20261016_fe7370c03602de1c",
+      "title": "日程发布 | 2026年植物逆境适应机制国际学术研讨会",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "北京",
+      "city": "北京",
+      "venue": "待确认",
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-18",
+      "url": "http://www.botany.org.cn/xwzx/tzgg/202610/t20261013_860359.html",
+      "source_url": "http://www.botany.org.cn/xwzx/tzgg/",
+      "source_name": "中国植物学会",
+      "source_type": "website",
+      "status": "ended",
+      "fields": [
+        "植物学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国植物学会",
+      "institution": "中国植物学会",
+      "organizer_type": "society",
+      "registration_url": "http://www.botany.org.cn/xwzx/tzgg/202610/t20261013_860359.html",
+      "registration_requirements": [],
+      "materials": [
+        {
+          "type": "summary",
+          "title": "原文/回顾入口",
+          "url": "http://www.botany.org.cn/xwzx/tzgg/202610/t20261013_860359.html"
+        }
+      ]
+    },
+    {
+      "id": "evt_20261009_047cce487d3409d0",
+      "title": "第十六届全国植物结构与生殖生物学学术研讨会第三轮通知",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "广东",
+      "city": "广州",
+      "venue": "中国广州市天河区华观路1961号",
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-12",
+      "url": "http://www.botany.org.cn/xwzx/tzgg/202609/t20260930_858714.html",
+      "source_url": "http://www.botany.org.cn/xwzx/tzgg/",
+      "source_name": "中国植物学会",
+      "source_type": "website",
+      "status": "ended",
+      "fields": [
+        "植物学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国植物学会",
+      "institution": "中国植物学会",
+      "organizer_type": "society",
+      "registration_url": "http://www.botany.org.cn/xwzx/tzgg/202609/t20260930_858714.html",
+      "registration_requirements": [],
+      "materials": [
+        {
+          "type": "summary",
+          "title": "原文/回顾入口",
+          "url": "http://www.botany.org.cn/xwzx/tzgg/202609/t20260930_858714.html"
+        }
+      ]
+    },
+    {
+      "id": "evt_20261009_b580aa520f1b548a",
+      "title": "中国植物学会第二十一届全国药用植物及植物药学术研讨会第二轮通知",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "辽宁",
+      "city": "大连",
+      "venue": "大连体育中心皇冠假日酒店（大连市甘井子区体育中心",
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-12",
+      "url": "http://www.botany.org.cn/xwzx/tzgg/202609/t20260930_858702.html",
+      "source_url": "http://www.botany.org.cn/xwzx/tzgg/",
+      "source_name": "中国植物学会",
+      "source_type": "website",
+      "status": "ended",
+      "fields": [
+        "植物学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国植物学会药用植物及植物药专业委员会、大连海洋中医药研究院、大连大学",
+      "institution": "中国植物学会药用植物及植物药专业委员会、大连海洋中医药研究院、大连大学",
+      "organizer_type": "society",
+      "registration_url": "http://www.botany.org.cn/xwzx/tzgg/202609/t20260930_858702.html",
+      "registration_requirements": [],
+      "materials": [
+        {
+          "type": "summary",
+          "title": "原文/回顾入口",
+          "url": "http://www.botany.org.cn/xwzx/tzgg/202609/t20260930_858702.html"
+        }
+      ]
+    },
+    {
+      "id": "evt_20261016_933cadbd3f5b18be",
+      "title": "2026年植物逆境适应机制国际学术研讨会通知",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "广东",
+      "city": "广州",
+      "venue": "待确认",
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-18",
+      "url": "http://www.botany.org.cn/xwzx/tzgg/202609/t20260928_858460.html",
+      "source_url": "http://www.botany.org.cn/xwzx/tzgg/",
+      "source_name": "中国植物学会",
+      "source_type": "website",
+      "status": "ended",
+      "fields": [
+        "植物学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国植物学会",
+      "institution": "中国植物学会",
+      "organizer_type": "society",
+      "registration_url": "http://www.botany.org.cn/xwzx/tzgg/202609/t20260928_858460.html",
+      "registration_requirements": [],
+      "materials": [
+        {
+          "type": "summary",
+          "title": "原文/回顾入口",
+          "url": "http://www.botany.org.cn/xwzx/tzgg/202609/t20260928_858460.html"
+        }
+      ]
+    },
+    {
+      "id": "evt_20260824_9773520d37fb02ed",
+      "title": "2026年中国植物园学术年会第三轮通知",
+      "type": "conference",
+      "domains": [
+        "生命科学"
+      ],
+      "province": "青海",
+      "city": "西宁",
+      "venue": "青海省西宁市城西区五四西路",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-27",
+      "url": "http://www.botany.org.cn/xwzx/tzgg/202608/t20260813_853575.html",
+      "source_url": "http://www.botany.org.cn/xwzx/tzgg/",
+      "source_name": "中国植物学会",
+      "source_type": "website",
+      "status": "ended",
+      "fields": [
+        "植物学"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国植物学会",
+      "institution": "中国植物学会",
+      "organizer_type": "society",
+      "registration_url": "http://www.botany.org.cn/xwzx/tzgg/202608/t20260813_853575.html",
+      "registration_requirements": [],
+      "materials": [
+        {
+          "type": "summary",
+          "title": "原文/回顾入口",
+          "url": "http://www.botany.org.cn/xwzx/tzgg/202608/t20260813_853575.html"
         }
       ]
     }

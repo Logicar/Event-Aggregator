@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T15:22:15+08:00",
-  "count": 13,
+  "generated_at": "2026-11-12T15:52:22+08:00",
+  "count": 12,
   "events": [
     {
       "id": "evt_20261116_d36e7a649e967927",
@@ -155,37 +155,6 @@
       "institution": "中国药学会",
       "organizer_type": "society",
       "registration_url": "https://www.cpa.org.cn/?do=info&cid=79151",
-      "registration_requirements": [],
-      "materials": []
-    },
-    {
-      "id": "evt_20261107_9f56cb12476ac43a",
-      "title": "关于举办2026年中国药学会药用辅料专业委员会学术年会的通知（第三轮）",
-      "type": "conference",
-      "domains": [
-        "医学药学"
-      ],
-      "province": "江苏",
-      "city": "南京",
-      "venue": "南京御冠酒店（南京市江宁区龙眠大道208号）",
-      "start_date": "2026-11-07",
-      "end_date": "2026-11-11",
-      "url": "https://www.cpa.org.cn/?do=info&cid=79150",
-      "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
-      "source_name": "中国药学会",
-      "source_type": "website",
-      "status": "ongoing",
-      "fields": [
-        "药学",
-        "临床药学",
-        "药物制剂"
-      ],
-      "keywords": [],
-      "tags": [],
-      "organizer": "中国药学会",
-      "institution": "中国药学会",
-      "organizer_type": "society",
-      "registration_url": "https://www.cpa.org.cn/?do=info&cid=79150",
       "registration_requirements": [],
       "materials": []
     },

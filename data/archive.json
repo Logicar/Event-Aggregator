@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T15:22:15+08:00",
+  "generated_at": "2026-11-12T15:52:22+08:00",
   "count": 8,
   "events": [
     {
@@ -41,18 +41,18 @@
       ]
     },
     {
-      "id": "evt_20261106_174c3ec6bdf8f072",
-      "title": "关于召开2026年中国药学会药物流行病学学术年会的通知（第三轮）",
+      "id": "evt_20261107_9f56cb12476ac43a",
+      "title": "关于举办2026年中国药学会药用辅料专业委员会学术年会的通知（第三轮）",
       "type": "conference",
       "domains": [
         "医学药学"
       ],
-      "province": "上海",
-      "city": "上海",
-      "venue": "上海明捷万丽酒店（上海市普陀区铜川路50号）",
-      "start_date": "2026-11-06",
-      "end_date": "2026-11-06",
-      "url": "https://www.cpa.org.cn/?do=info&cid=79135",
+      "province": "江苏",
+      "city": "南京",
+      "venue": "南京御冠酒店（南京市江宁区龙眠大道208号）",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-11",
+      "url": "https://www.cpa.org.cn/?do=info&cid=79150",
       "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
       "source_name": "中国药学会",
       "source_type": "website",
@@ -67,13 +67,13 @@
       "organizer": "中国药学会",
       "institution": "中国药学会",
       "organizer_type": "society",
-      "registration_url": "https://www.cpa.org.cn/?do=info&cid=79135",
+      "registration_url": "https://www.cpa.org.cn/?do=info&cid=79150",
       "registration_requirements": [],
       "materials": [
         {
           "type": "summary",
           "title": "原文/回顾入口",
-          "url": "https://www.cpa.org.cn/?do=info&cid=79135"
+          "url": "https://www.cpa.org.cn/?do=info&cid=79150"
         }
       ]
     },

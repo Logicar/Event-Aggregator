@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T15:52:22+08:00",
+  "generated_at": "2026-11-13T15:29:30+08:00",
   "count": 12,
   "events": [
     {
@@ -325,7 +325,7 @@
       "source_url": "http://www.botany.org.cn/xwzx/tzgg/",
       "source_name": "中国植物学会",
       "source_type": "website",
-      "status": "upcoming",
+      "status": "ongoing",
       "fields": [
         "植物学"
       ],

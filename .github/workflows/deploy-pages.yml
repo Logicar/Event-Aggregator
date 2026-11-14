@@ -7,6 +7,10 @@ on:
       - "data/**"
       - "web/**"
       - ".github/workflows/deploy-pages.yml"
+  # 抓取任务完成后自动部署（解决 GITHUB_TOKEN push 不触发 workflow 的问题）
+  workflow_run:
+    workflows: ["Scrape & Update Data"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -25,6 +29,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4

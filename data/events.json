@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-17T16:40:47+08:00",
-  "count": 17,
+  "generated_at": "2026-11-18T16:06:46+08:00",
+  "count": 18,
   "events": [
     {
       "id": "evt_20261221_bbdbc1b852151652",
@@ -31,6 +31,37 @@
       "institution": "中国药学会",
       "organizer_type": "society",
       "registration_url": "https://www.cpa.org.cn/?do=info&cid=79178",
+      "registration_requirements": [],
+      "materials": []
+    },
+    {
+      "id": "evt_20261127_79b91cfa35915fc5",
+      "title": "关于举办2026年中国药学会制药工程专业委员会学术年会的通知（第二轮）",
+      "type": "conference",
+      "domains": [
+        "医学药学"
+      ],
+      "province": "广东",
+      "city": "广州",
+      "venue": "广东工业大学大学城校区（广东省广州市番禺区广州大学城外环西路100号）",
+      "start_date": "2026-11-27",
+      "end_date": "2026-11-29",
+      "url": "https://www.cpa.org.cn/?do=info&cid=79184",
+      "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
+      "source_name": "中国药学会",
+      "source_type": "website",
+      "status": "upcoming",
+      "fields": [
+        "药学",
+        "临床药学",
+        "药物制剂"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国药学会",
+      "institution": "中国药学会",
+      "organizer_type": "society",
+      "registration_url": "https://www.cpa.org.cn/?do=info&cid=79184",
       "registration_requirements": [],
       "materials": []
     },

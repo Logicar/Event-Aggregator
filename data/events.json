@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-18T16:06:46+08:00",
+  "generated_at": "2026-11-19T16:09:51+08:00",
   "count": 18,
   "events": [
     {
@@ -205,7 +205,7 @@
       "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
       "source_name": "中国药学会",
       "source_type": "website",
-      "status": "upcoming",
+      "status": "ongoing",
       "fields": [
         "药学",
         "临床药学",
@@ -297,7 +297,7 @@
       "source_url": "https://www.caai.cn/site/term/14.html",
       "source_name": "中国人工智能学会",
       "source_type": "website",
-      "status": "upcoming",
+      "status": "ongoing",
       "fields": [
         "人工智能",
         "AI4Science"

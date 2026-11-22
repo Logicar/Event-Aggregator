@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T15:51:48+08:00",
-  "count": 38,
+  "generated_at": "2026-11-22T15:38:37+08:00",
+  "count": 40,
   "events": [
     {
       "id": "evt_20261103_d5b9b16a606c526a",
@@ -37,6 +37,79 @@
           "type": "summary",
           "title": "原文/回顾入口",
           "url": "https://www.cpa.org.cn/?do=info&cid=79153"
+        }
+      ]
+    },
+    {
+      "id": "evt_20261119_93e08873066787c5",
+      "title": "关于召开中国药学会儿童药物专业委员会第四届学术年会的通知（第三轮）",
+      "type": "conference",
+      "domains": [
+        "医学药学"
+      ],
+      "province": "浙江",
+      "city": "杭州",
+      "venue": "浙江省杭州市西湖区三台山路278号浙江宾馆",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-21",
+      "url": "https://www.cpa.org.cn/?do=info&cid=79152",
+      "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
+      "source_name": "中国药学会",
+      "source_type": "website",
+      "status": "ended",
+      "fields": [
+        "药学",
+        "临床药学",
+        "药物制剂"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国药学会",
+      "institution": "中国药学会",
+      "organizer_type": "society",
+      "registration_url": "https://www.cpa.org.cn/?do=info&cid=79152",
+      "registration_requirements": [],
+      "materials": [
+        {
+          "type": "summary",
+          "title": "原文/回顾入口",
+          "url": "https://www.cpa.org.cn/?do=info&cid=79152"
+        }
+      ]
+    },
+    {
+      "id": "evt_20261119_388af5cfa4ccc559",
+      "title": "2026中国人工智能学会智能系统工程专委会学术年会会议通知（第一轮）",
+      "type": "conference",
+      "domains": [
+        "AI4Science"
+      ],
+      "province": "四川",
+      "city": "成都",
+      "venue": "四川省成都市新都区西南石油大学",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-21",
+      "url": "https://www.caai.cn/site/content/11492.html",
+      "source_url": "https://www.caai.cn/site/term/14.html",
+      "source_name": "中国人工智能学会",
+      "source_type": "website",
+      "status": "ended",
+      "fields": [
+        "人工智能",
+        "AI4Science"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国人工智能学会（CAAI）",
+      "institution": "中国人工智能学会（CAAI）",
+      "organizer_type": "society",
+      "registration_url": "https://www.caai.cn/site/content/11492.html",
+      "registration_requirements": [],
+      "materials": [
+        {
+          "type": "summary",
+          "title": "原文/回顾入口",
+          "url": "https://www.caai.cn/site/content/11492.html"
         }
       ]
     },

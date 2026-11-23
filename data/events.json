@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T15:38:37+08:00",
-  "count": 16,
+  "generated_at": "2026-11-23T16:26:33+08:00",
+  "count": 14,
   "events": [
     {
       "id": "evt_20261221_bbdbc1b852151652",
@@ -97,37 +97,6 @@
       "materials": []
     },
     {
-      "id": "evt_20261116_d36e7a649e967927",
-      "title": "关于召开第十届中国药学会基层医院药学学术年会的通知（第二轮）",
-      "type": "conference",
-      "domains": [
-        "医学药学"
-      ],
-      "province": "浙江",
-      "city": "宁波",
-      "venue": "宁波南苑饭店（浙江省宁波市海曙区灵桥路2号",
-      "start_date": "2026-11-16",
-      "end_date": "2026-11-22",
-      "url": "https://www.cpa.org.cn/?do=info&cid=79160",
-      "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
-      "source_name": "中国药学会",
-      "source_type": "website",
-      "status": "ongoing",
-      "fields": [
-        "药学",
-        "临床药学",
-        "药物制剂"
-      ],
-      "keywords": [],
-      "tags": [],
-      "organizer": "中国药学会",
-      "institution": "中国药学会",
-      "organizer_type": "society",
-      "registration_url": "https://www.cpa.org.cn/?do=info&cid=79160",
-      "registration_requirements": [],
-      "materials": []
-    },
-    {
       "id": "evt_20261226_d07a8993e2c264bc",
       "title": "关于举办2026年中国药学会临床药学专业委员会学术年会的通知（第二轮）",
       "type": "conference",
@@ -155,37 +124,6 @@
       "institution": "中国药学会",
       "organizer_type": "society",
       "registration_url": "https://www.cpa.org.cn/?do=info&cid=79156",
-      "registration_requirements": [],
-      "materials": []
-    },
-    {
-      "id": "evt_20261120_115ecbd3b59768e9",
-      "title": "关于举办第十九届药物制剂学术大会的通知（第三轮）",
-      "type": "conference",
-      "domains": [
-        "医学药学"
-      ],
-      "province": "北京",
-      "city": "北京",
-      "venue": "北京市东城区天坛西里2号（100050）",
-      "start_date": "2026-11-20",
-      "end_date": "2026-11-22",
-      "url": "https://www.cpa.org.cn/?do=info&cid=79154",
-      "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
-      "source_name": "中国药学会",
-      "source_type": "website",
-      "status": "ongoing",
-      "fields": [
-        "药学",
-        "临床药学",
-        "药物制剂"
-      ],
-      "keywords": [],
-      "tags": [],
-      "organizer": "中国药学会",
-      "institution": "中国药学会",
-      "organizer_type": "society",
-      "registration_url": "https://www.cpa.org.cn/?do=info&cid=79154",
       "registration_requirements": [],
       "materials": []
     },

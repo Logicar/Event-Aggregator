@@ -1,8 +1,39 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T16:26:33+08:00",
+  "generated_at": "2026-11-24T18:37:30+08:00",
   "count": 14,
   "events": [
+    {
+      "id": "evt_20261204_82888afd0beb12df",
+      "title": "关于举办第二十六届中国药师周的通知（第二轮）",
+      "type": "conference",
+      "domains": [
+        "医学药学"
+      ],
+      "province": "北京",
+      "city": "北京",
+      "venue": "首都宾馆（北京市东城区前门东大街3号）",
+      "start_date": "2026-12-04",
+      "end_date": "2026-12-06",
+      "url": "https://www.cpa.org.cn/?do=info&cid=79189",
+      "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
+      "source_name": "中国药学会",
+      "source_type": "website",
+      "status": "upcoming",
+      "fields": [
+        "药学",
+        "临床药学",
+        "药物制剂"
+      ],
+      "keywords": [],
+      "tags": [],
+      "organizer": "中国药学会",
+      "institution": "中国药学会",
+      "organizer_type": "society",
+      "registration_url": "https://www.cpa.org.cn/?do=info&cid=79189",
+      "registration_requirements": [],
+      "materials": []
+    },
     {
       "id": "evt_20261221_bbdbc1b852151652",
       "title": "关于召开2026年中国药学会民族药专业委员会学术会议的通知（第一轮）",
@@ -124,37 +155,6 @@
       "institution": "中国药学会",
       "organizer_type": "society",
       "registration_url": "https://www.cpa.org.cn/?do=info&cid=79156",
-      "registration_requirements": [],
-      "materials": []
-    },
-    {
-      "id": "evt_20261204_e3bb885a129b16d4",
-      "title": "关于举办中国药学会循证药学专业委员会第九届学术年会的通知",
-      "type": "conference",
-      "domains": [
-        "医学药学"
-      ],
-      "province": "四川",
-      "city": "成都",
-      "venue": "四川省成都市",
-      "start_date": "2026-12-04",
-      "end_date": "2026-12-06",
-      "url": "https://www.cpa.org.cn/?do=info&cid=79151",
-      "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
-      "source_name": "中国药学会",
-      "source_type": "website",
-      "status": "upcoming",
-      "fields": [
-        "药学",
-        "临床药学",
-        "药物制剂"
-      ],
-      "keywords": [],
-      "tags": [],
-      "organizer": "中国药学会",
-      "institution": "中国药学会",
-      "organizer_type": "society",
-      "registration_url": "https://www.cpa.org.cn/?do=info&cid=79151",
       "registration_requirements": [],
       "materials": []
     },

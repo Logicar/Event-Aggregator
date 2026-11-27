@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T17:01:50+08:00",
-  "count": 15,
+  "generated_at": "2026-11-27T17:16:10+08:00",
+  "count": 14,
   "events": [
     {
       "id": "evt_20261210_b62c47b0b1754883",
@@ -112,7 +112,7 @@
       "source_url": "https://www.cpa.org.cn/?do=infolist&classid=270",
       "source_name": "中国药学会",
       "source_type": "website",
-      "status": "upcoming",
+      "status": "ongoing",
       "fields": [
         "药学",
         "临床药学",
@@ -419,35 +419,6 @@
       "institution": "中国植物学会",
       "organizer_type": "society",
       "registration_url": "http://www.botany.org.cn/xwzx/tzgg/202610/t20261030_863524.html",
-      "registration_requirements": [],
-      "materials": []
-    },
-    {
-      "id": "evt_20261217_a3a266d76b7d27c6",
-      "title": "中国植物学会第三届植物科学前沿学术大会第一轮通知",
-      "type": "conference",
-      "domains": [
-        "生命科学"
-      ],
-      "province": "福建",
-      "city": "福州",
-      "venue": "福建省福州市",
-      "start_date": "2026-12-17",
-      "end_date": "2026-12-20",
-      "url": "http://www.botany.org.cn/xwzx/tzgg/202607/t20260707_848910.html",
-      "source_url": "http://www.botany.org.cn/xwzx/tzgg/",
-      "source_name": "中国植物学会",
-      "source_type": "website",
-      "status": "upcoming",
-      "fields": [
-        "植物学"
-      ],
-      "keywords": [],
-      "tags": [],
-      "organizer": "中国植物学会",
-      "institution": "中国植物学会",
-      "organizer_type": "society",
-      "registration_url": "http://www.botany.org.cn/xwzx/tzgg/202607/t20260707_848910.html",
       "registration_requirements": [],
       "materials": []
     }

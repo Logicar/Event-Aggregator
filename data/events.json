@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T17:16:10+08:00",
+  "generated_at": "2026-11-28T16:35:27+08:00",
   "count": 14,
   "events": [
     {
@@ -205,7 +205,7 @@
       "source_url": "https://www.caai.cn/site/term/14.html",
       "source_name": "中国人工智能学会",
       "source_type": "website",
-      "status": "upcoming",
+      "status": "ongoing",
       "fields": [
         "人工智能",
         "AI4Science"

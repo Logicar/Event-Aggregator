@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T17:16:10+08:00",
-  "count": 41,
+  "generated_at": "2026-11-28T16:35:27+08:00",
+  "count": 40,
   "events": [
     {
       "id": "evt_20261116_d36e7a649e967927",
@@ -147,42 +147,6 @@
           "type": "summary",
           "title": "原文/回顾入口",
           "url": "https://www.caai.cn/site/content/11492.html"
-        }
-      ]
-    },
-    {
-      "id": "evt_20261106_d53a9b96fe7a103a",
-      "title": "第十九届中国智能机器人大会会议通知",
-      "type": "conference",
-      "domains": [
-        "AI4Science"
-      ],
-      "province": "陕西",
-      "city": "西安",
-      "venue": "西安市曲江惠宾苑宾馆（西安雁塔南路388号）",
-      "start_date": "2026-11-06",
-      "end_date": "2026-11-08",
-      "url": "https://www.caai.cn/site/content/11432.html",
-      "source_url": "https://www.caai.cn/site/term/14.html",
-      "source_name": "中国人工智能学会",
-      "source_type": "website",
-      "status": "ended",
-      "fields": [
-        "人工智能",
-        "AI4Science"
-      ],
-      "keywords": [],
-      "tags": [],
-      "organizer": "中国人工智能学会",
-      "institution": "中国人工智能学会",
-      "organizer_type": "society",
-      "registration_url": "https://www.caai.cn/site/content/11432.html",
-      "registration_requirements": [],
-      "materials": [
-        {
-          "type": "summary",
-          "title": "原文/回顾入口",
-          "url": "https://www.caai.cn/site/content/11432.html"
         }
       ]
     },
